@@ -1,33 +1,25 @@
 # rtl8723be_wifi
-WiFi fix for the Realtek rtl8723be Wireless card in ubuntu
 
-# ABOUT
+WiFi fix for the Realtek RTL8723BE Wireless card in Ubuntu.
 
-For linux users , Realtek rtl8723be wireless card doesn't work. It either disconnects automatically after a 15-30 minutes or doesn't show WiFi Hotspots beyond 4-5 feet.
-This would fix your WiFi card and let you surf the internet through the WiFi.  
+> Forked from [roopansh/rtl8723be_wifi](https://github.com/roopansh/rtl8723be_wifi).
 
-**NOTE : IT DOESN' WORK IN KALI-LINUX**
+1. Download the `fix-rtl8723be` script:
 
-# HOW TO INSTALL
-1.) Download/Clone the repo
+   ```sh
+   wget github.com/Arnesfield/rtl8723be_wifi/raw/master/fix-rtl8723be
+   ```
 
-	git clone https://github.com/roopansh/rtl8723be_wifi
+2. Add permissions to the script:
 
-2.) Go to the directory containing the downloaded files
+   ```sh
+   chmod +x fix-rtl8723be
+   ```
 
-	cd rtl8723be_wifi
+3. Run the script:
 
-3.) Enter the following command in the terminal.
+   ```sh
+   sudo ./fix-rtl8723be
+   ```
 
-	bash rtl8723be.sh
-
-4.)**(OPTIONAL)** Restart your pc and check your wifi connections.
-
-## About the project author
-#### Roopansh Bansal
-B.Tech undergraduate (Computer Science & Engineering)  
-IIT Guwahati  
-India  
-
-roopansh.bansal@gmail.com  
-www.linkedin.com/in/roopansh-bansal
+4. You may need to reboot your system.
