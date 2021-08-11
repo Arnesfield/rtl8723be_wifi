@@ -9,9 +9,13 @@ echo "modprobe -r rtl8723be"
 modprobe -r rtl8723be
 result=$?
 if [ $result -eq 0 ]; then
-  echo "Writing to /etc/modprobe.d/rtl8723be.conf:"
-  echo "options rtl8723be fwlps=N ips=N ant_sel=1" | tee /etc/modprobe.d/rtl8723be.conf
-  result=$?
+  if [ $1 -ne 0 ]; then
+    echo "Writing to /etc/modprobe.d/rtl8723be.conf:"
+    echo "options rtl8723be fwlps=N ips=N ant_sel=1" | tee /etc/modprobe.d/rtl8723be.conf
+    result=$?
+  else
+    result=0
+  fi
   echo "modprobe rtl8723be"
   modprobe rtl8723be
   if [ $result -ne 0 ]; then

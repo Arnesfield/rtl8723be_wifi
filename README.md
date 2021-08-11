@@ -22,4 +22,10 @@ WiFi fix for the Realtek RTL8723BE Wireless card in Ubuntu.
    sudo ./fix-rtl8723be
    ```
 
+   Pass `0` argument to skip writing to `/etc/modprobe.d/rtl8723be.conf`:
+
+   ```sh
+   sudo ./fix-rtl8723be 0
+   ```
+
 4. You may need to reboot your system.
